@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "Neta Butensky",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
