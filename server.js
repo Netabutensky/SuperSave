@@ -14,6 +14,15 @@ app.use( bodyParser.urlencoded( { extended: false } ) )
 app.use( express.static( path.join( __dirname, 'dist' ) ) )
 app.use( '/', router )
 
+
+
+
+
+
+
+
+
+
 mongoose.connect('mongodb://localhost/hackathonDB', { useNewUrlParser: true } ).then( () => {
    app.listen( port, () => console.log( `Running server on port ${ port }` ) )
 } )
