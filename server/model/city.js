@@ -10,12 +10,11 @@ const storeSchema = new Schema ({
 const citiesSchema = new Schema({
    name: String,
    city_id: Number,
-   city_stores: [storeSchema],
-
+   city_stores: [{type: Schema.Types.ObjectId, ref: 'store'}],
 })
 
-
+const Store = mongoose.model('store', storeSchema)
 const City = mongoose.model('city', citiesSchema)
 
-module.exports = City
+module.exports = {City,Store}
 
