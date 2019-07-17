@@ -61,16 +61,17 @@ router.get('/user', (req, res) =>
 
 router.post('/user', async (req, res) => 
 {
+    console.log(req.body)
     const user1 = new User(req.body)
     const newShopList = []
-    for (let p of user1.shop_list) 
-    {
-        let productId = await request.post(`https://api.superget.co.il/?api_key=2884fae2abf12546ec3d81ea109fa6d284a6b4bc&action=GetProductsByName&product_name=${p}`)
-        productId = JSON.parse(product)
-        productId = product[0].product_id;
-        newShopList.push({productName : p, productId : productId})
-    }
-    user1.shop_list = newShopList
+    // for (let p of user1.shop_list) 
+    // {
+    //     let productId = await request.post(`https://api.superget.co.il/?api_key=2884fae2abf12546ec3d81ea109fa6d284a6b4bc&action=GetProductsByName&product_name=${p}`)
+    //     productId = JSON.parse(product)
+    //     productId = product[0].product_id;
+    //     newShopList.push({productName : p, productId : productId})
+    // }
+    // user1.shop_list = newShopList
     user1.save()
     res.end()
     // res.post(user1)

@@ -7,46 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <title> </title>
+    <title></title>
 
 </head>
 
 <body>
+    <div id="mytitle">עגלת הקניות שלי
 
-    <div id="title">,ברוך הבא
 
-        <br>
-        <p1 id="myuser"></p1>
+
+
+
+        <div id="loadthis"></div>
+
+
+
+
+        <div id="allStores"></div>
+
+        <script id="stores-template" type="text/x-handlebars-template">
+
+
+       {{#each store}}
+        <div id="storeName">שם: {{store_name}} -כתובת: {{store_address}}</div>
+
+        {{/each}}
+
+
+       </script>
+
+
+
+       
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
-    <script id="title-template" type="text/x-handlebars-template">
-
-
-       <div id="title_user"> {{user_name}}  </div>
-
-           </script>
-
-    <div id="loadthis"></div>
 
     <div class="wrapper">
 
         <input type="checkbox" id="navigation" />
         <label for="navigation">
 
-            <img id="img_title"
-                src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/67216626_10213172914349208_624365576277458944_o.jpg?_nc_cat=100&_nc_oc=AQm8ZJgMzg4QCvx8chrmyEh0Sy0bJ8CaDSL-SyJCpn_uokh0AVqyLiefFPJ-0O2OdEI&_nc_ht=scontent.ftlv1-1.fna&oh=be89956f3ba2d10825a0837ebbc54c72&oe=5DAEEE4E">
+            <img id="img_title" src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/67216626_10213172914349208_624365576277458944_o.jpg?_nc_cat=100&_nc_oc=AQm8ZJgMzg4QCvx8chrmyEh0Sy0bJ8CaDSL-SyJCpn_uokh0AVqyLiefFPJ-0O2OdEI&_nc_ht=scontent.ftlv1-1.fna&oh=be89956f3ba2d10825a0837ebbc54c72&oe=5DAEEE4E
+https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/67216626_10213172914349208_624365576277458944_o.jpg?_nc_cat=100&_nc_oc=AQm8ZJgMzg4QCvx8chrmyEh0Sy0bJ8CaDSL-SyJCpn_uokh0AVqyLiefFPJ-0O2OdEI&_nc_ht=scontent.ftlv1-1.fna&oh=be89956f3ba2d10825a0837ebbc54c72&oe=5DAEEE4E
+">
         </label>
         <nav>
             <ul>
@@ -59,11 +62,12 @@
                     <a href="start.html">התחל</a>
                 </li>
                 <li>
-                    <a href="shoppingcart.html">רשימת קניות</a>
+                    <a href="">רשימת קניות</a>
                 </li>
                 <li>
                     <a href="myuser.html">המשתמש שלי</a>
                 </li>
+
                 <li>
                     <a href="about.html">אודות</a>
                 </li>
@@ -71,7 +75,6 @@
         </nav>
 
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="superManager.js"></script>

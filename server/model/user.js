@@ -5,7 +5,7 @@ const userSchema = new Schema({
    user_name: String,
    user_id: Number,
    user_city: String,
-   shop_list: []
+   shop_list: Array
 })
 
 const User = mongoose.model('user', userSchema)
